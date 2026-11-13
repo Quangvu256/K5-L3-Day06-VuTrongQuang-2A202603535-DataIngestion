@@ -45,3 +45,24 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 | Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
 
 [data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+
+## 4. Hướng dẫn chạy tái lập (Reproducibility)
+
+- **Corpus:** 3 văn bản Công báo Chính phủ tại `starter/data/` (`luat_du_lieu_2024.pdf`, `luat_gd_dt_2023.pdf`, `nd13_2023_bvdlcn.pdf`), chi tiết nguồn/quyền và quy tắc đếm `82` trang hữu ích trong [data/manifest.json](data/manifest.json).
+- **Benchmark:** 20 câu hỏi (`15 dev / 5 test`, 5 câu có metadata filter) tại [benchmark/questions.json](benchmark/questions.json).
+- **Embedding & Vector Store:** OpenAI `text-embedding-3-small` (`1536` chiều) + `PostgreSQL 16` (`pgvector 0.8.7`, exact cosine `<=>`).
+
+```powershell
+cd starter
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pip install openai
+Copy-Item .env.example .env
+# Dien OPENAI_API_KEY va EMBEDDING_MODEL=text-embedding-3-small vao starter/.env
+docker compose -p day6_student_starter up -d --wait
+python scripts/check_setup.py
+python -m src.run
+```
+
+Kết quả chạy được lưu tại `starter/results/summary.json`, `starter/results/traces.json`, `starter/results/ingestion_errors.json`; kết quả audit thủ công lưu tại `starter/results/manual_audit.json`.

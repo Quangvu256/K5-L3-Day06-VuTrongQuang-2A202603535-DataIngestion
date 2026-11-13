@@ -1,0 +1,240 @@
+{
+  "benchmark_version": "1.0",
+  "created_before_experiment": true,
+  "selection_criterion_before_test": "Chon chien luoc dat Evidence Hit@3 cao nhat tren tap dev; neu hoa, uu tien Hit@1 tren dev, sau do uu tien so chunk it hon (tiet kiem luu tru va thoi gian truy xuat).",
+  "coherence_sample_positions": [
+    {"pos_id": "c01", "document_id": "luat_du_lieu_2024", "page": 2, "anchor": "Khoản 7 Điều 3 (Dữ liệu cốt lõi)"},
+    {"pos_id": "c02", "document_id": "luat_du_lieu_2024", "page": 5, "anchor": "Khoản 2 Điều 8 (Trách nhiệm quản lý nhà nước)"},
+    {"pos_id": "c03", "document_id": "luat_du_lieu_2024", "page": 10, "anchor": "Điều 18 (Cung cấp dữ liệu cho cơ quan nhà nước)"},
+    {"pos_id": "c04", "document_id": "luat_du_lieu_2024", "page": 22, "anchor": "Điều 42 (Sàn dữ liệu)"},
+    {"pos_id": "c05", "document_id": "luat_gd_dt_2023", "page": 4, "anchor": "Điều 7 (Hình thức thể hiện của thông điệp dữ liệu)"},
+    {"pos_id": "c06", "document_id": "luat_gd_dt_2023", "page": 10, "anchor": "Điều 19 (Giá trị pháp lý của chứng thư điện tử)"},
+    {"pos_id": "c07", "document_id": "luat_gd_dt_2023", "page": 21, "anchor": "Khoản 4 Điều 40 (Cơ sở dữ liệu Bộ, ngành, địa phương)"},
+    {"pos_id": "c08", "document_id": "nd13_2023_bvdlcn", "page": 2, "anchor": "Khoản 1-3 Điều 2 (Định nghĩa dữ liệu cá nhân)"},
+    {"pos_id": "c09", "document_id": "nd13_2023_bvdlcn", "page": 18, "anchor": "Điều 23 (Thông báo vi phạm quy định BVDLCN)"},
+    {"pos_id": "c10", "document_id": "nd13_2023_bvdlcn", "page": 29, "anchor": "Điều 43 (Hiệu lực thi hành và miễn trừ DN khởi nghiệp)"}
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Theo Luật Dữ liệu, cơ quan nào ban hành danh mục dữ liệu cốt lõi?",
+      "expected_answer": "Thủ tướng Chính phủ ban hành danh mục dữ liệu cốt lõi.",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 2,
+      "evidence_quote": "7. Dữ liệu cốt lõi là dữ liệu quan trọng trực tiếp tác động đến quốc phòng, an ninh, đối ngoại, kinh tế vĩ mô, ổn định xã hội, sức khỏe và an toàn cộng đồng thuộc danh mục do Thủ tướng Chính phủ ban hành.",
+      "filter": null
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "Khác biệt chính giữa dữ liệu mở và dữ liệu dùng chung là gì?",
+      "expected_answer": "Dữ liệu mở là dữ liệu mọi cơ quan, tổ chức, cá nhân có nhu cầu đều được tiếp cận, sử dụng; còn dữ liệu dùng chung là dữ liệu sử dụng chung trong các cơ quan Đảng, Nhà nước, Mặt trận Tổ quốc và tổ chức chính trị - xã hội.",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 2,
+      "evidence_quote": "4. Dữ li ệu m ở là dữ liệu mà mọi cơ quan, tổ chức, cá nhân có nhu cầu đều được tiếp cận, chia sẻ, khai thác, sử dụng.",
+      "filter": null
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Cơ quan nào là đầu mối quản lý nhà nước về dữ liệu trước Chính phủ và có ngoại lệ nào không?",
+      "expected_answer": "Bộ Công an là cơ quan đầu mối chịu trách nhiệm trước Chính phủ, trừ dữ liệu thuộc phạm vi quản lý của Bộ Quốc phòng (bao gồm dữ liệu cơ yếu do Bộ trưởng Bộ Quốc phòng chịu trách nhiệm).",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 5,
+      "evidence_quote": "b) Bộ Công an là cơ quan đầu mối chịu trách nhiệm trước Chính p hủ thực hiện quản lý nhà nước về dữ liệu, trừ quy định tại điểm c khoản này;",
+      "filter": null
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Trong những trường hợp nào tổ chức, cá nhân bắt buộc cung cấp dữ liệu cho cơ quan nhà nước mà không cần sự đồng ý của chủ thể dữ liệu?",
+      "expected_answer": "Trong các trường hợp: ứng phó tình trạng khẩn cấp; nguy cơ đe dọa an ninh quốc gia chưa đến mức ban bố tình trạng khẩn cấp; thảm họa; phòng, chống bạo loạn, khủng bố.",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 10,
+      "evidence_quote": "2. Tổ chức, cá nhân phải cung cấp dữ liệu cho cơ quan nhà nước khi có yêu cầu của cơ quan có thẩm quyền mà không cần chủ thể dữ liệu đồng ý trong các trường hợp sau đây:",
+      "filter": null
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Quỹ phát triển dữ liệu quốc gia hoạt động theo những nguyên tắc nào?",
+      "expected_answer": "Không vì mục đích lợi nhuận; quản lý sử dụng đúng mục đích, công khai minh bạch; hỗ trợ hoạt động xây dựng, phát triển, bảo vệ, quản trị, xử lý dữ liệu; được chi khi ngân sách nhà nước chưa đáp ứng.",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 15,
+      "evidence_quote": "3. Quỹ phát triển dữ liệu quốc gia hoạt động theo nguyên tắc sau đây:\n\na) Không vì mục đích lợi nhuận;",
+      "filter": {"year": 2024}
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Tổ chức cung cấp dịch vụ sàn dữ liệu phải thuộc loại hình đơn vị nào?",
+      "expected_answer": "Là đơn vị sự nghiệp công lập hoặc doanh nghiệp nhà nước đáp ứng điều kiện cung cấp dịch vụ và được cấp phép thành lập theo quy định của pháp luật.",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 22,
+      "evidence_quote": "2. Tổ chức cung cấp dịch vụ sàn dữ liệu là đơn vị sự nghiệp công lập, doanh nghiệp nhà nước đáp ứng điều kiện cung cấp dịch vụ và được cấp phép thành lập theo quy định của pháp luật.",
+      "filter": null
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Thông điệp dữ liệu có thể được thể hiện dưới những hình thức nào?",
+      "expected_answer": "Văn bản điện tử, tài liệu điện tử, chứng thư điện tử, chứng từ điện tử, hợp đồng điện tử, thư điện tử, điện tín, điện báo, fax và hình thức trao đổi dữ liệu điện tử khác.",
+      "gold_source_id": "luat_gd_dt_2023",
+      "gold_page": 4,
+      "evidence_quote": "1. Thông điệp dữ liệu được thể hiện dưới hình thức văn bản điện tử, tài liệu điện tử, chứng thư điện tử, chứng từ điện tử, hợp đồng điện tử, thư điện tử, điện tín, điện báo, fax và hình thức trao đổi dữ liệu điện tử khác theo quy định của pháp luật.",
+      "filter": null
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Chứng thư điện tử do cơ quan nước ngoài cấp muốn được công nhận tại Việt Nam phải đáp ứng thủ tục gì và có ngoại lệ không?",
+      "expected_answer": "Phải được hợp pháp hóa lãnh sự, trừ trường hợp được miễn theo quy định của pháp luật Việt Nam.",
+      "gold_source_id": "luat_gd_dt_2023",
+      "gold_page": 10,
+      "evidence_quote": "2. Chứng thư điện tử do c ơ quan, t ổ chức có th ẩm quyền của nước ngoài c ấp để được công nh ận và s ử dụng tại Việt Nam ph ải được hợp pháp hóa lãnh s ự, trừ trường hợp được miễn theo quy định của pháp luật Việt Nam.",
+      "filter": null
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "Cá nhân, tổ chức Việt Nam được phép dùng chữ ký điện tử nước ngoài khi nào?",
+      "expected_answer": "Khi có nhu cầu giao dịch điện tử với tổ chức, cá nhân nước ngoài mà chữ ký điện tử hoặc chứng thư chữ ký điện tử của tổ chức cung cấp dịch vụ trong nước chưa được công nhận tại nước đó.",
+      "gold_source_id": "luat_gd_dt_2023",
+      "gold_page": 15,
+      "evidence_quote": "3. Đối t ượng s ử d ụng ch ữ ký điện t ử n ước ngoài, ch ứng th ư ch ữ ký điện t ử nước ngoài được công nhận theo quy định tại khoản 2 Điều này là tổ chức, cá nhân nước ngoài; t ổ chức, cá nhân Vi ệt Nam có nhu c ầu giao d ịch điện tử với tổ chức, cá nhân nước ngoài mà chữ ký điện tử, chứng thư chữ ký điện tử của tổ chức cung cấp dịch vụ trong nước chưa được công nhận tại nước đó.",
+      "filter": null
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Danh mục cơ sở dữ liệu của Bộ, ngành, địa phương phải thể hiện những nội dung cơ bản nào?",
+      "expected_answer": "Tên cơ sở dữ liệu; mô tả mục đích, phạm vi, nội dung; cơ chế thu thập, cập nhật, nguồn dữ liệu; liệt kê các hạng mục dữ liệu mở và dữ liệu được chia sẻ.",
+      "gold_source_id": "luat_gd_dt_2023",
+      "gold_page": 21,
+      "evidence_quote": "Danh mục cơ sở dữ liệu của Bộ, ngành, địa phương phải thể hiện được các nội dung cơ bản sau đây: tên cơ sở dữ liệu; mô tả mục đích, phạm vi, nội dung của từng cơ sở dữ liệu; cơ chế thu thập, cập nhật, nguồn dữ liệu được thu thập của từng cơ sở dữ liệu; liệt kê các hạng mục dữ liệu bao gồm dữ liệu mở và dữ liệu được chia sẻ.",
+      "filter": {"document_id": "luat_gd_dt_2023"}
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Luật Giao dịch điện tử năm 2023 có hiệu lực thi hành từ ngày nào?",
+      "expected_answer": "Từ ngày 01 tháng 7 năm 2024.",
+      "gold_source_id": "luat_gd_dt_2023",
+      "gold_page": 29,
+      "evidence_quote": "1. Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2024.",
+      "filter": null
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Dữ liệu cá nhân được phân chia thành những loại nào?",
+      "expected_answer": "Bao gồm dữ liệu cá nhân cơ bản và dữ liệu cá nhân nhạy cảm.",
+      "gold_source_id": "nd13_2023_bvdlcn",
+      "gold_page": 2,
+      "evidence_quote": "Dữ liệu cá nhân bao g ồm dữ liệu cá nhân cơ bản và dữ liệu cá nhân nhạy cảm.",
+      "filter": null
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "Việc thông báo cho chủ thể dữ liệu về hoạt động xử lý dữ liệu cá nhân phải được thực hiện vào thời điểm nào và bằng hình thức ra sao?",
+      "expected_answer": "Thực hiện một lần trước khi tiến hành xử lý và phải thể hiện ở định dạng có thể in, sao chép bằng văn bản, gồm cả dạng điện tử hoặc định dạng kiểm chứng được.",
+      "gold_source_id": "nd13_2023_bvdlcn",
+      "gold_page": 11,
+      "evidence_quote": "1. Vi ệc thông báo được th ực hi ện m ột l ần tr ước khi ti ến hành đối v ới ho ạt động xử lý dữ liệu cá nhân.",
+      "filter": null
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Thời hạn xóa dữ liệu cá nhân sau khi có yêu cầu của chủ thể dữ liệu là bao lâu?",
+      "expected_answer": "Trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu, trừ trường hợp pháp luật có quy định khác.",
+      "gold_source_id": "nd13_2023_bvdlcn",
+      "gold_page": 15,
+      "evidence_quote": "5. Việc xóa d ữ liệu được th ực hi ện trong 72 gi ờ sau khi có yêu c ầu của chủ thể dữ liệu với toàn b ộ dữ liệu cá nhân mà Bên Ki ểm soát d ữ liệu cá nhân, Bên Kiểm soát và x ử lý d ữ li ệu cá nhân thu th ập được, tr ừ tr ường h ợp pháp lu ật có quy định khác.",
+      "filter": null
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Khi phát hiện xảy ra vi phạm quy định bảo vệ dữ liệu cá nhân, đơn vị kiểm soát dữ liệu phải thông báo cho cơ quan nào và trong bao lâu?",
+      "expected_answer": "Thông báo cho Bộ Công an (Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao) chậm nhất 72 giờ sau khi xảy ra hành vi vi phạm.",
+      "gold_source_id": "nd13_2023_bvdlcn",
+      "gold_page": 18,
+      "evidence_quote": "1. Tr ường h ợp phát hi ện x ảy ra vi ph ạm quy định b ảo v ệ d ữ li ệu cá nhân, Bên Ki ểm soát d ữ li ệu cá nhân, Bên Ki ểm soát và x ử lý d ữ li ệu cá nhân thông báo cho B ộ Công an (C ục An ninh m ạng và phòng, ch ống t ội ph ạm s ử d ụng công nghệ cao) ch ậm nhất 72 gi ờ sau khi x ảy ra hành vi vi ph ạm theo M ẫu số 03 tại Ph ụ l ục c ủa Ngh ị định này.",
+      "filter": {"doc_type": "nghi_dinh"}
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Tổ chức, cá nhân không thuộc cơ quan Đảng, Nhà nước và không phải chủ thể dữ liệu được khai thác dữ liệu cá nhân trong Cơ sở dữ liệu tổng hợp quốc gia khi nào?",
+      "expected_answer": "Khi được sự đồng ý của Trung tâm dữ liệu quốc gia và cá nhân là chủ thể dữ liệu được khai thác.",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 19,
+      "evidence_quote": "khai thác và sử dụng dữ liệu cá nhân khi được sự đồng ý của Tru ng tâm dữ liệu quốc gia và cá nhân là chủ thể dữ liệu được khai thác;",
+      "filter": null
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "Những loại dữ liệu nào không được phép giao dịch trên sàn dữ liệu?",
+      "expected_answer": "Dữ liệu gây nguy hại đến quốc phòng, an ninh, đối ngoại, cơ yếu; dữ liệu không được chủ thể dữ liệu đồng ý (trừ trường hợp luật có quy định khác); dữ liệu khác bị cấm giao dịch.",
+      "gold_source_id": "luat_du_lieu_2024",
+      "gold_page": 22,
+      "evidence_quote": "3. Dữ liệu không được phép giao dịch bao gồm:\n\na) Dữ liệu gây nguy hại đến quốc phòng, an ninh, đối ngoại, cơ yếu;\n\nb) Dữ liệu không được chủ thể dữ liệu đồng ý, trừ trường hợp pháp luật có quy định khác;",
+      "filter": {"year": 2024, "doc_type": "luat"}
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "dien_dat_lai",
+      "question": "Cơ quan nhà nước ưu tiên những lĩnh vực hoạt động nào để thực hiện toàn trình trên môi trường điện tử?",
+      "expected_answer": "Cung cấp dịch vụ công; công tác quản trị nội bộ; chỉ đạo, điều hành; giám sát, kiểm tra, thanh tra.",
+      "gold_source_id": "luat_gd_dt_2023",
+      "gold_page": 24,
+      "evidence_quote": "2. Các l ĩnh vực hoạt động của cơ quan nhà n ước ưu tiên th ực hiện toàn trình trên môi trường điện tử bao gồm: cung cấp dịch vụ công; công tác qu ản trị nội bộ; chỉ đạo, điều hành; giám sát, kiểm tra, thanh tra.",
+      "filter": null
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "truc_tiep",
+      "question": "Quyền được biết và quyền đồng ý của chủ thể dữ liệu cá nhân bị giới hạn bởi ngoại lệ nào?",
+      "expected_answer": "Quyền được biết trừ trường hợp luật có quy định khác; quyền đồng ý trừ trường hợp quy định tại Điều 17 Nghị định 13/2023/NĐ-CP.",
+      "gold_source_id": "nd13_2023_bvdlcn",
+      "gold_page": 7,
+      "evidence_quote": "2. Quyền đồng ý Chủ th ể d ữ li ệu được đồng ý ho ặc không đồng ý cho phép x ử lý d ữ li ệu cá nhân của mình, trừ trường hợp quy định tại Điều 17 Nghị định này.",
+      "filter": null
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "Doanh nghiệp khởi nghiệp được miễn trừ quy định chỉ định bộ phận bảo vệ dữ liệu cá nhân trong bao lâu và trường hợp nào không được áp dụng miễn trừ này?",
+      "expected_answer": "Được miễn trừ trong thời gian 02 năm đầu kể từ khi thành lập doanh nghiệp, nhưng không áp dụng nếu doanh nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân.",
+      "gold_source_id": "nd13_2023_bvdlcn",
+      "gold_page": 29,
+      "evidence_quote": "2. Các doanh nghi ệp siêu nh ỏ, doanh nghi ệp nh ỏ, doanh nghi ệp v ừa, doanh nghiệp khởi nghiệp được quyền lựa chọn miễn trừ quy định về chỉ định cá nhân và bộ ph ận b ảo v ệ d ữ li ệu cá nhân trong th ời gian 02 n ăm đầu k ể t ừ khi thành l ập doanh nghiệp.\n\n3. Các doanh nghi ệp siêu nh ỏ, doanh nghi ệp nh ỏ, doanh nghi ệp v ừa, doanh nghiệp khởi nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân không áp dụng quy định tại khoản 2 Điều này.",
+      "filter": {"doc_type": "nghi_dinh", "year": 2023}
+    }
+  ]
+}
+

@@ -1,0 +1,58 @@
+{
+  "corpus_name": "Phap luat Viet Nam ve Du lieu va Giao dich dien tu (2023-2024)",
+  "language": "vi",
+  "accessed_at": "2026-11-13",
+  "page_counting_rule": "Dem trang PDF vat ly chua noi dung dieu khoan phap luat (bo trang phu luc muc luc va cac bieu mau dien don o cuoi Nghi dinh 13/2023/ND-CP). Moi trang duoc tinh deu co > 1.000 ky tu noi dung sau chuan hoa.",
+  "total_physical_pages": 90,
+  "total_useful_pages": 82,
+  "documents": [
+    {
+      "source_id": "luat_du_lieu_2024",
+      "title": "Luat Du lieu so 60/2024/QH15 (Cong bao so 1523 + 1524 ngay 29-12-2024)",
+      "source_path": "starter/data/luat_du_lieu_2024.pdf",
+      "source_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/01/luat60.pdf",
+      "license_or_permission": "Van ban quy pham phap luat cong khai (Khong thuoc doi tuong bao ho quyen tac gia theo Dieu 15 Luat So huu tri tue Viet Nam)",
+      "doc_type": "luat",
+      "year": 2024,
+      "document_number": "60/2024/QH15",
+      "physical_pages": 23,
+      "included_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+      "excluded_pages": [],
+      "useful_pages_count": 23,
+      "raw_chars": 48554
+    },
+    {
+      "source_id": "luat_gd_dt_2023",
+      "title": "Luat Giao dich dien tu so 20/2023/QH15 (Cong bao so 867 + 868 ngay 30-7-2023)",
+      "source_path": "starter/data/luat_gd_dt_2023.pdf",
+      "source_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2023/8/luat20-2023-qh15..pdf",
+      "license_or_permission": "Van ban quy pham phap luat cong khai (Khong thuoc doi tuong bao ho quyen tac gia theo Dieu 15 Luat So huu tri tue Viet Nam)",
+      "doc_type": "luat",
+      "year": 2023,
+      "document_number": "20/2023/QH15",
+      "physical_pages": 30,
+      "included_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+      "excluded_pages": [],
+      "useful_pages_count": 30,
+      "raw_chars": 59905
+    },
+    {
+      "source_id": "nd13_2023_bvdlcn",
+      "title": "Nghi dinh so 13/2023/ND-CP ve Bao ve du lieu ca nhan (Cong bao so 685 + 686 ngay 30-4-2023)",
+      "source_path": "starter/data/nd13_2023_bvdlcn.pdf",
+      "source_url": "https://congbaocdn.chinhphu.vn/CongBaoCP/VanBan/2023/4/39228/44543-1-2023685-68613-2023-nd-cp.pdf",
+      "license_or_permission": "Van ban quy pham phap luat cong khai (Khong thuoc doi tuong bao ho quyen tac gia theo Dieu 15 Luat So huu tri tue Viet Nam)",
+      "doc_type": "nghi_dinh",
+      "year": 2023,
+      "document_number": "13/2023/ND-CP",
+      "physical_pages": 37,
+      "included_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+      "excluded_pages": [30, 31, 32, 33, 34, 35, 36, 37],
+      "excluded_reason": "Trang 30 la muc luc Phu luc; trang 31-37 la cac bieu mau dien don (Mau so 01-06).",
+      "useful_pages_count": 29,
+      "raw_chars": 71805,
+      "note": "File 13nd.signed.pdf tu vanban.chinhphu.vn la ban scan 39 trang (0 ky tu) nen da thay bang ban Cong bao chinh thuc co lop text."
+    }
+  ]
+}
+
