@@ -148,7 +148,7 @@ def main() -> None:
                 print(
                     f"\n    Rank {h['rank']} | {h['chunk_id']} | score={h['score']}\n"
                     f"    Metadata: source={h['source']}, page={h['page']}, doc_type={meta.get('doc_type')}, year={meta.get('year')}, chapter={meta.get('chapter')}\n"
-                    f"    Text: {h['text'][:420]}{'...' if len(h['text']) > 420 else ''}"
+                    f"    Text: {h['text']}"
                 )
                 if h["manual_metadata_complete_and_correct"] is None:
                     ok = _prompt_yes_no(f"Metadata rank {h['rank']} du va dung?", default=True)

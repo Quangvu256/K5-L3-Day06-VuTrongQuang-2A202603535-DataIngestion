@@ -1172,8 +1172,8 @@
         "expected_answer": "Khi được sự đồng ý của Trung tâm dữ liệu quốc gia và cá nhân là chủ thể dữ liệu được khai thác.",
         "evidence_quote": "khai thác và sử dụng dữ liệu cá nhân khi được sự đồng ý của Tru ng tâm dữ liệu quốc gia và cá nhân là chủ thể dữ liệu được khai thác;",
         "auto_hit_at_3": false,
-        "manual_grounding_score_0_to_2": 2,
-        "manual_grounding_reason": "ok",
+        "manual_grounding_score_0_to_2": 0,
+        "manual_grounding_reason": "Thiếu bằng chứng trang 19 (khoản 3 Điều 35); top-3 lấn sang quy định lưu trữ (p.8), thu thập/đồng bộ (p.18) và số hóa (p.7).",
         "hits": [
           {
             "rank": 1,
@@ -1253,8 +1253,8 @@
         "expected_answer": "Dữ liệu gây nguy hại đến quốc phòng, an ninh, đối ngoại, cơ yếu; dữ liệu không được chủ thể dữ liệu đồng ý (trừ trường hợp luật có quy định khác); dữ liệu khác bị cấm giao dịch.",
         "evidence_quote": "3. Dữ liệu không được phép giao dịch bao gồm:\n\na) Dữ liệu gây nguy hại đến quốc phòng, an ninh, đối ngoại, cơ yếu;\n\nb) Dữ liệu không được chủ thể dữ liệu đồng ý, trừ trường hợp pháp luật có quy định khác;",
         "auto_hit_at_3": true,
-        "manual_grounding_score_0_to_2": 0,
-        "manual_grounding_reason": "chả có",
+        "manual_grounding_score_0_to_2": 2,
+        "manual_grounding_reason": "Oke — Rank 1 chứa trọn Điều 42 khoản 3 (a, b, c) kèm ngoại lệ (Rank 2, 3 dư thông tin phân loại/BVDLCN).",
         "hits": [
           {
             "rank": 1,
@@ -1331,8 +1331,8 @@
         "expected_answer": "Cung cấp dịch vụ công; công tác quản trị nội bộ; chỉ đạo, điều hành; giám sát, kiểm tra, thanh tra.",
         "evidence_quote": "2. Các l ĩnh vực hoạt động của cơ quan nhà n ước ưu tiên th ực hiện toàn trình trên môi trường điện tử bao gồm: cung cấp dịch vụ công; công tác qu ản trị nội bộ; chỉ đạo, điều hành; giám sát, kiểm tra, thanh tra.",
         "auto_hit_at_3": true,
-        "manual_grounding_score_0_to_2": 0,
-        "manual_grounding_reason": "ko có",
+        "manual_grounding_score_0_to_2": 2,
+        "manual_grounding_reason": "Oke — Rank 1 chứa trọn Điều 44 khoản 2 (dư nhẹ khoản 7 Điều 43 và khoản 1 Điều 44 ở đầu chunk).",
         "hits": [
           {
             "rank": 1,
@@ -1411,7 +1411,7 @@
         "evidence_quote": "2. Quyền đồng ý Chủ th ể d ữ li ệu được đồng ý ho ặc không đồng ý cho phép x ử lý d ữ li ệu cá nhân của mình, trừ trường hợp quy định tại Điều 17 Nghị định này.",
         "auto_hit_at_3": true,
         "manual_grounding_score_0_to_2": 2,
-        "manual_grounding_reason": "ok",
+        "manual_grounding_reason": "Oke — Rank 1 chứa trọn Điều 9 khoản 1 và 2 kèm đầy đủ ngoại lệ (Rank 2, 3 dư các khoản khác cùng Điều 9).",
         "hits": [
           {
             "rank": 1,
@@ -1491,8 +1491,8 @@
         "expected_answer": "Được miễn trừ trong thời gian 02 năm đầu kể từ khi thành lập doanh nghiệp, nhưng không áp dụng nếu doanh nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân.",
         "evidence_quote": "2. Các doanh nghi ệp siêu nh ỏ, doanh nghi ệp nh ỏ, doanh nghi ệp v ừa, doanh nghiệp khởi nghiệp được quyền lựa chọn miễn trừ quy định về chỉ định cá nhân và bộ ph ận b ảo v ệ d ữ li ệu cá nhân trong th ời gian 02 n ăm đầu k ể t ừ khi thành l ập doanh nghiệp.\n\n3. Các doanh nghi ệp siêu nh ỏ, doanh nghi ệp nh ỏ, doanh nghi ệp v ừa, doanh nghiệp khởi nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân không áp dụng quy định tại khoản 2 Điều này.",
         "auto_hit_at_3": true,
-        "manual_grounding_score_0_to_2": 0,
-        "manual_grounding_reason": "0",
+        "manual_grounding_score_0_to_2": 2,
+        "manual_grounding_reason": "Oke — Rank 1 chứa trọn Điều 43 khoản 2 và 3 đủ thời hạn và ngoại lệ (dư nhẹ 2 khoản cuối Điều 42 ở đầu chunk).",
         "hits": [
           {
             "rank": 1,
@@ -1572,8 +1572,8 @@
         "expected_answer": "Khi được sự đồng ý của Trung tâm dữ liệu quốc gia và cá nhân là chủ thể dữ liệu được khai thác.",
         "evidence_quote": "khai thác và sử dụng dữ liệu cá nhân khi được sự đồng ý của Tru ng tâm dữ liệu quốc gia và cá nhân là chủ thể dữ liệu được khai thác;",
         "auto_hit_at_3": false,
-        "manual_grounding_score_0_to_2": 2,
-        "manual_grounding_reason": "(Top-3 giong B) ok",
+        "manual_grounding_score_0_to_2": 0,
+        "manual_grounding_reason": "(Top-3 B/C) Thiếu bằng chứng trang 19 (khoản 3 Điều 35); top-3 lấn sang quy định lưu trữ (p.8), thu thập/đồng bộ (p.18) và số hóa (p.7).",
         "hits": [
           {
             "rank": 1,
@@ -1654,7 +1654,7 @@
         "evidence_quote": "3. Dữ liệu không được phép giao dịch bao gồm:\n\na) Dữ liệu gây nguy hại đến quốc phòng, an ninh, đối ngoại, cơ yếu;\n\nb) Dữ liệu không được chủ thể dữ liệu đồng ý, trừ trường hợp pháp luật có quy định khác;",
         "auto_hit_at_3": true,
         "manual_grounding_score_0_to_2": 2,
-        "manual_grounding_reason": "ok",
+        "manual_grounding_reason": "Oke — Rank 1 chứa trọn Điều 42 khoản 3 (a, b, c) kèm ngoại lệ; Rank 2, 3 cùng Luật Dữ liệu 2024 đúng filter.",
         "hits": [
           {
             "rank": 1,
@@ -1732,8 +1732,8 @@
         "expected_answer": "Cung cấp dịch vụ công; công tác quản trị nội bộ; chỉ đạo, điều hành; giám sát, kiểm tra, thanh tra.",
         "evidence_quote": "2. Các l ĩnh vực hoạt động của cơ quan nhà n ước ưu tiên th ực hiện toàn trình trên môi trường điện tử bao gồm: cung cấp dịch vụ công; công tác qu ản trị nội bộ; chỉ đạo, điều hành; giám sát, kiểm tra, thanh tra.",
         "auto_hit_at_3": true,
-        "manual_grounding_score_0_to_2": 0,
-        "manual_grounding_reason": "(Top-3 giong B) ko có",
+        "manual_grounding_score_0_to_2": 2,
+        "manual_grounding_reason": "(Top-3 B/C) Oke — Rank 1 chứa trọn Điều 44 khoản 2 (dư nhẹ khoản 7 Điều 43 và khoản 1 Điều 44 ở đầu chunk).",
         "hits": [
           {
             "rank": 1,
@@ -1812,7 +1812,7 @@
         "evidence_quote": "2. Quyền đồng ý Chủ th ể d ữ li ệu được đồng ý ho ặc không đồng ý cho phép x ử lý d ữ li ệu cá nhân của mình, trừ trường hợp quy định tại Điều 17 Nghị định này.",
         "auto_hit_at_3": true,
         "manual_grounding_score_0_to_2": 2,
-        "manual_grounding_reason": "(Top-3 giong B) ok",
+        "manual_grounding_reason": "(Top-3 B/C) Oke — Rank 1 chứa trọn Điều 9 khoản 1 và 2 kèm đầy đủ ngoại lệ (Rank 2, 3 dư các khoản khác cùng Điều 9).",
         "hits": [
           {
             "rank": 1,
@@ -1892,8 +1892,8 @@
         "expected_answer": "Được miễn trừ trong thời gian 02 năm đầu kể từ khi thành lập doanh nghiệp, nhưng không áp dụng nếu doanh nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân.",
         "evidence_quote": "2. Các doanh nghi ệp siêu nh ỏ, doanh nghi ệp nh ỏ, doanh nghi ệp v ừa, doanh nghiệp khởi nghiệp được quyền lựa chọn miễn trừ quy định về chỉ định cá nhân và bộ ph ận b ảo v ệ d ữ li ệu cá nhân trong th ời gian 02 n ăm đầu k ể t ừ khi thành l ập doanh nghiệp.\n\n3. Các doanh nghi ệp siêu nh ỏ, doanh nghi ệp nh ỏ, doanh nghi ệp v ừa, doanh nghiệp khởi nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân không áp dụng quy định tại khoản 2 Điều này.",
         "auto_hit_at_3": true,
-        "manual_grounding_score_0_to_2": 0,
-        "manual_grounding_reason": "(Top-3 giong B) 0",
+        "manual_grounding_score_0_to_2": 2,
+        "manual_grounding_reason": "(Top-3 B/C) Oke — Rank 1 chứa trọn Điều 43 khoản 2 và 3 đủ thời hạn và ngoại lệ (dư nhẹ 2 khoản cuối Điều 42 ở đầu chunk).",
         "hits": [
           {
             "rank": 1,

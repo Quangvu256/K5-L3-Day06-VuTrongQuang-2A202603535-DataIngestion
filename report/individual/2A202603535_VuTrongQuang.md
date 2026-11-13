@@ -50,14 +50,14 @@
 | Strategy | Coherence trung bình /2 (n) | Metadata đủ và đúng (n/N) | Filter tuân thủ (n/N hoặc N/A) | Grounding 0/1/2 (số câu) và trung bình /2 |
 |---|---:|---:|---:|---|
 | A | 0.55 / 2 (n=10) | 10/15 | 1/2 (test) · 4/5 (all) | 1 / 3 / 1 · avg **1.00 / 2** |
-| B | 1.10 / 2 (n=10) | 6/15 | 1/2 (test) · 3/5 (all) | 3 / 0 / 2 · avg **0.80 / 2** |
-| C | 1.10 / 2 (n=10) | 9/15 | **2/2 (test) · 5/5 (all)** | 2 / 0 / 3 · avg **1.20 / 2** |
+| B | 1.10 / 2 (n=10) | 6/15 | 1/2 (test) · 3/5 (all) | 1 / 0 / 4 · avg **1.60 / 2** |
+| C | 1.10 / 2 (n=10) | 9/15 | **2/2 (test) · 5/5 (all)** | 1 / 0 / 4 · avg **1.60 / 2** |
 
 - **Đường dẫn trace, nhãn thủ công và cách chọn mẫu:**
   - Số liệu tổng hợp và trace top-3 đầy đủ: [summary.json](../../starter/results/summary.json), [traces.json](../../starter/results/traces.json).
   - Nhãn audit thủ công do học viên tự chấm: [manual_audit.json](../../starter/results/manual_audit.json).
   - Cách chọn mẫu Coherence: chọn trước khi chạy `10` vị trí nguồn cố định (`c01–c10`, rải đều 3 văn bản theo các `Điều`/`Khoản` chính trong [questions.json](../../benchmark/questions.json)). Chấm Metadata & Grounding trên toàn bộ `5` câu `test` (`q16–q20`).
-  - **Minh bạch người chấm & thiên lệch:** Toàn bộ nhãn Coherence, Metadata và Grounding do **chính tác giả (Vũ Trọng Quang)** tự chấm qua `manual_audit_cli.py`, không dùng LLM chấm thay; có nguy cơ thiên lệch người chấm (khi chấm Metadata, một số hit đúng `source/page/year` nhưng bị tác giả đánh `false` do nội dung đoạn văn chưa chứa trực tiếp thông tin câu hỏi — được giữ nguyên trung thực và ghi vào mục Hạn chế).
+  - **Minh bạch người chấm & thiên lệch:** Nhãn Coherence, Metadata và Grounding ban đầu do **chính tác giả (Vũ Trọng Quang)** tự chấm qua `manual_audit_cli.py`; do phiên bản CLI đầu tiên cắt cụt hiển thị ở `420` ký tự làm sót nửa sau chunk ở B/C (`q17, q18, q20`), sau khi sửa `manual_audit_cli.py` để hiển thị đủ text, tác giả đã dùng AI đối chiếu lại phần text đầy đủ của 5 câu test B/C và tự xem xét, xác nhận lại nhãn Grounding theo [GUIDE.md](../../GUIDE.md). Nguy cơ thiên lệch vẫn tồn tại do tác giả tự kiểm chứng; riêng phần Metadata vẫn giữ nguyên nhãn lần chấm đầu (một số hit đúng `source/page/year` nhưng bị đánh `false` vì nội dung không chứa trực tiếp câu trả lời) và được ghi nhận ở mục Hạn chế.
 
 ## Phân tích và kết luận
 - **So sánh A–B (Ảnh hưởng của Chunking):**
@@ -65,13 +65,13 @@
   - Nguyên nhân: trong `A`, có `5` câu `dev` (`q06, q09, q10, q12, q15`) và `2` câu `test` (`q16, q20`) có `location_only_hit3=True` nhưng `evidence_split_warning=True` — nghĩa là truy xuất tìm đúng trang nhưng đoạn cắt cứng `500` ký tự cắt ngang giữa câu nên không giữ trọn `evidence_quote`, làm điểm Coherence trung bình của A chỉ đạt `0.55/2` so với `1.10/2` của B.
 - **So sánh B–C (Ảnh hưởng của Metadata Filter):**
   - Trên `Hit@1` và `Evidence Hit@3`, B và C bằng nhau (`11/15` và `12/15` trên `dev`; `4/5` trên `test`), vì với 5 câu có filter, thuật ngữ đặc thù đã giúp rank 1 của B đứng đúng văn bản.
-  - Tuy nhiên, ở khía cạnh **tuân thủ filter và chất lượng top-3**, B chỉ đạt `1/2` (test) và `3/5` (toàn bộ 5 câu filter): cụ thể tại `q10` (dev) rank 3 của B lọt sang `luat_du_lieu_2024` trang 7 (`score=0.6269`), và tại `q17` (test) rank 3 của B lọt sang `nd13_2023_bvdlcn` trang 15 (`score=0.5034`). Trong khi đó, **C đạt `2/2` (test) và `5/5` (all) tuân thủ filter 100%**, nâng Grounding trung bình trên `test` từ `0.80/2` (B) lên **`1.20/2`** (C).
+  - Tuy nhiên, ở khía cạnh **tuân thủ filter và chất lượng top-3**, B chỉ đạt `1/2` (test) và `3/5` (toàn bộ 5 câu filter): cụ thể tại `q10` (dev) rank 3 của B lọt sang `luat_du_lieu_2024` trang 7 (`score=0.6269`), và tại `q17` (test) rank 3 của B lọt sang `nd13_2023_bvdlcn` trang 15 (`score=0.5034`). Trong khi đó, **C đạt `2/2` (test) và `5/5` (all) tuân thủ filter 100%** (loại sạch nhiễu ngoài văn bản mục tiêu) và cùng B đạt Grounding trung bình **`1.60/2`** (cao hơn `1.00/2` của A nhờ giữ trọn các khoản và điều kiện ngoại lệ trong 1 chunk).
   - **Hữu ích & hạn chế của metadata:** Trường `doc_type`, `year`, `document_id` giúp thu hẹp phạm vi tìm kiếm đúng văn bản hiệu lực (hữu ích khi 2 văn bản cùng nói về "dữ liệu cá nhân" nhưng khác năm/cơ quan ban hành). Hạn chế: ở corpus này metadata `chapter` chưa được gắn làm điều kiện filter chính và chưa có filter theo hiệu lực sửa đổi giữa các luật.
 - **2 ví dụ lỗi thực tế từ trace:**
   1. **`q06` (`dev`, gold: `luat_du_lieu_2024` trang 22):** Hỏi *“Tổ chức cung cấp dịch vụ sàn dữ liệu phải thuộc loại hình đơn vị nào?”*. Cả A (`fixed_500_50:luat_du_lieu_2024:p21:c001`, score `0.6062`) và B (`para_1000:luat_du_lieu_2024:p08:c001`, score `0.5783`) đều đạt `Hit@3 = False` và có `evidence_split_warning = True` (khoản 2 Điều 42 bị tách khỏi cụm câu trả lời hoặc dính lỗi khoảng trắng `côn g lập` từ PDF).
   2. **`q16` (`test`, gold: `luat_du_lieu_2024` trang 19, không filter):** Hỏi về điều kiện khai thác dữ liệu cá nhân trong *Cơ sở dữ liệu tổng hợp quốc gia*. B/C (`para_1000:luat_du_lieu_2024:p08:c003`, score `0.6930`) kéo về quy định chung ở trang 8 thay vì trang 19 vì nội dung khoản 3 Điều 34 nằm sang trang 19 nên mất tiêu đề `Điều 34` trên đầu trang.
 - **Chiến lược chọn, đánh đổi, điều kiện áp dụng:**
-  - Theo tiêu chí đã chốt trước khi xem test, chọn **Chiến lược C** (`by_paragraph max 1000` + metadata filter khi có ngữ cảnh): đạt `DEV Hit@3 = 12/15` (`80.0%`), `TEST Hit@3 = 4/5` (`80.0%`), giảm `36.6%` số chunk so với A, Grounding cao nhất (`1.20/2`) và tuân thủ filter `100%`.
+  - Theo tiêu chí đã chốt trước khi xem test, chọn **Chiến lược C** (`by_paragraph max 1000` + metadata filter khi có ngữ cảnh): đạt `DEV Hit@3 = 12/15` (`80.0%`), `TEST Hit@3 = 4/5` (`80.0%`), giảm `36.6%` số chunk so với A, Grounding đạt `1.60/2` và tuân thủ filter `100%`.
   - Đánh đổi: `by_paragraph` tạo các chunk độ dài không đều (`53–1000` ký tự) và không khắc phục được trường hợp một `Điều` luật bị ngắt qua hai trang PDF vật lý; filter chỉ phát huy tác dụng khi người dùng/hệ thống cung cấp ngữ cảnh đúng trước khi truy xuất.
 - **Hạn chế của dữ liệu, nhãn, test nhỏ, đo thời gian/chi phí:**
   - Tập `test` nhỏ (`n=5`) nên mỗi câu tương ứng `20%`, sai số mẫu cao; kết quả chỉ phản ánh corpus 3 văn bản pháp luật này, không suy rộng ra mọi loại tài liệu.
@@ -84,4 +84,4 @@
 
 ## Minh bạch sử dụng AI (`RULES.md`)
 - **Công cụ sử dụng:** Trợ lý AI trong IDE (hỗ trợ viết code các module Python trong `starter/src/`, script `manual_audit_cli.py`, tạo `data/manifest.json` và bản nháp 20 câu hỏi `benchmark/questions.json` từ nội dung `normalized_pages.json`).
-- **Cách kiểm tra của học viên:** Tự chạy kiểm chứng toàn bộ `20/20` `evidence_quote` khớp đúng trên trang nguồn; tự chạy pipeline `python -m src.run` thu thập số liệu và trace thật; **tự chấm thủ công 100%** các nhãn Coherence, Metadata và Grounding trong `manual_audit.json` qua `manual_audit_cli.py` (không dùng LLM chấm thay).
+- **Cách kiểm tra của học viên:** Tự chạy kiểm chứng toàn bộ `20/20` `evidence_quote` khớp đúng trên trang nguồn; tự chạy pipeline `python -m src.run` thu thập số liệu và trace thật; tự chấm thủ công các nhãn Coherence, Metadata và Grounding A qua `manual_audit_cli.py`, và tự xem xét/xác nhận phần AI hỗ trợ đối chiếu lại Grounding B/C trên text đầy đủ sau khi sửa lỗi cắt cụt `420` ký tự của CLI.
